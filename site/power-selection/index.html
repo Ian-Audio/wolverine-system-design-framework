@@ -1,0 +1,673 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../objectives/">
+      
+      
+        <link rel="next" href="../chassis-fit/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Power Selection and Constraints - Wolverine System Design</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#power-selection-and-constraints" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Wolverine System Design" class="md-header__button md-logo" aria-label="Wolverine System Design" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Wolverine System Design
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Power Selection and Constraints
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Wolverine System Design" class="md-nav__button md-logo" aria-label="Wolverine System Design" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Wolverine System Design
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../objectives/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Objectives
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Power Selection and Constraints
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Power Selection and Constraints
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-amplifier-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Amplifier options
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-power-match-with-vaf-i91-speaker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Power match with VAF i91 speaker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-selection-of-wolverine-ef3-n-model-and-rail-voltage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Selection of Wolverine EF3-n model and rail voltage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mitigation-for-systemic-overheating-wolverine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mitigation for systemic overheating - Wolverine
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chassis-fit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chassis Fit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../main-options/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wolverine and Mezmerize options
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fault-systems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LED indicators and Faults
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-amplifier-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Amplifier options
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-power-match-with-vaf-i91-speaker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Power match with VAF i91 speaker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-selection-of-wolverine-ef3-n-model-and-rail-voltage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Selection of Wolverine EF3-n model and rail voltage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mitigation-for-systemic-overheating-wolverine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mitigation for systemic overheating - Wolverine
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="power-selection-and-constraints">Power selection and constraints</h1>
+<h2 id="1-amplifier-options">1. Amplifier options</h2>
+<p>My HiFi is currently housed in a Parker cabinet,</p>
+<p><img alt="Cabinet and speakers" src="../images/cabinet-speakers.jpg" /></p>
+<p>For domestic harmony, I need to maintain or improve the look of the lounge room.</p>
+<p>I haven't found a better alternate so the amplifier must go in the existing Parker cabinet.</p>
+<p>The DiyAudio forums contain many cautions about placing Wolverine amplifiers in cabinets, and comments on the unpredictability of cooling depending on the exact placement.</p>
+<p>The cabinet has an open back, but airflow is restricted so the Wolverine amplifier variant selected must be of relatively low heat output.</p>
+<h2 id="2-power-match-with-vaf-i91-speaker">2. Power match with VAF i91 speaker</h2>
+<p>I am upgrading to a Wolverine in search of improved sound quality rather than volume. </p>
+<p>My VAF signature i91 mk1 speakers have nominal impedance 6Ω, and sensitivity 88 dB/W/m, max 150W.</p>
+<p>My 40W per channel Exposure Super VX integrated amp drives these with ample volume for me; I listen at modest levels.</p>
+<p>All Wolverine listed options are 100W or more, so I will have more than enough sound level (volume) capability. </p>
+<p>I'm upgrading for hoped gains in sound quality, not sound level (volume).  The reason to have a bit more is headroom for dynamics.</p>
+<h2 id="3-selection-of-wolverine-ef3-n-model-and-rail-voltage">3. Selection of Wolverine EF3-n model and rail voltage</h2>
+<p>The Wolverine amplifier comes in variants EF3-3, EF3-4 and EF-3-5.  I select the <strong>EF3-3</strong> variant as it generates the least heat.</p>
+<p>I also must select rail voltage.  Higher rail voltages increase output capability, but also generate more heat.</p>
+<p>The build guide gives this advice for 2 channels at 4 ohms  (rearranged and culled to ignore high power variants)</p>
+<table>
+<thead>
+<tr>
+<th>DC rail</th>
+<th>Typical VA</th>
+<th>8Ω power W</th>
+<th>AC V</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>49</td>
+<td>500</td>
+<td>100</td>
+<td>35</td>
+</tr>
+<tr>
+<td>49</td>
+<td>600</td>
+<td>120</td>
+<td>35</td>
+</tr>
+<tr>
+<td>54</td>
+<td>600</td>
+<td>120</td>
+<td>38</td>
+</tr>
+<tr>
+<td>54</td>
+<td>700</td>
+<td>150</td>
+<td>38</td>
+</tr>
+<tr>
+<td>57</td>
+<td>700</td>
+<td>150</td>
+<td>40</td>
+</tr>
+<tr>
+<td>57</td>
+<td>800</td>
+<td>160</td>
+<td>40</td>
+</tr>
+<tr>
+<td>59</td>
+<td>800</td>
+<td>160</td>
+<td>42</td>
+</tr>
+</tbody>
+</table>
+<p>But 50V DC / 36 V AC with 600 VA seems enough.  </p>
+<p>However, I note that the Toroidy 800vA is the same size as the 600vA, so I might pick <strong>36 V AC with 800 VA</strong></p>
+<p>One complexity is deciding what the primary should be specified, based on my mains supply
+I've been measuring my mains supply for the past week, at different times of day.<br />
+So far, it ranges from 230V AC to 240V AC. 
+Mornings 230V, evenings 240V. 
+This is on the lower end I believe for Australian supply.
+So my choices for spec'ing the tranformer primary are 230V, 240V or a custom 235V.
+I'll get slightly different resulting actual rail voltages depending on which I choose.</p>
+<p>I also have to pick the configuration, stereo, dual mono with 2 transformers in a single chassis, or 2 monoblocs</p>
+<p>The pre-build guide says:</p>
+<ul>
+<li>For most builders, a conventional two-channel stereo amplifier in one chassis with one power supply is the best starting point. It is cheaper, simpler, easier to package, and fully adequate for normal home hi-fi. </li>
+<li>Dual mono is worth considering if you specifically want stronger channel separation, have the chassis space and budget, and are comfortable planning two supply systems inside one enclosure. </li>
+<li>Monoblocks are best reserved for builders who deliberately want separate amplifiers, have room for two chassis, and accept the extra cost and duplicated mains wiring. </li>
+<li>If this is your first large amplifier build, choose a conservative configuration. Avoid high rail voltages, unnecessarily complex dual mono layouts, ... A clean, moderate, standard build is much more likely to succeed ...</li>
+</ul>
+<p>Monoblocs are marginal in the cabinet regarding remaining gap for ventilation.</p>
+<p>Dual mono is complex, but I like the idea of the better channel separation, and don't mind the extra cost, so I think I'll try that despite it being my first amplifier.
+It better fits the objective of getting the best out of my VAF i91's, as far as practicable.</p>
+<p>If I go for a dual mono with shared transformer, I'd pick 1 x 800 VA.
+If I go for 2 independent transformers, I'd go for 2 x 400 VA.</p>
+<h2 id="mitigation-for-systemic-overheating-wolverine">Mitigation for systemic overheating - Wolverine</h2>
+<p>I've decided to sell my turntable (Linn LP12 with SME IV arm), as I'm no longer using it.<br />
+This gives more ventilation space in the cabinet (which has an open back)</p>
+<p>I will build the preamp as a half width unit, so it can go in the turntable space with my half-width streamer.
+This leaves a bigger free space for the power amplifier below.</p>
+<p>Other things I might try if needed are:</p>
+<ul>
+<li>Move the cabinet forward to increase the gap at the wall from 65mm to something bigger.</li>
+<li>Moving the cabinet door forwards by putting the hinges on pads, to create a 10 mm perimeter gap.</li>
+<li>Removing the cabinet's glass door. (subject to the domestic harmony test)</li>
+<li>Fan blowing upwards from the base of the cabinet past the amplifiers (last resort)</li>
+</ul>
+<h1 id="preamp-power-requirements">Preamp Power Requirements</h1>
+<p>I plan to build a standard "10 years after" Mezmerize.  </p>
+<p>This is designed to run at 200mA and the official Salas BOM nominates a 50vA , 2 x 15 V transformer. </p>
+<p>The intended placement in the turntable area has limited ventilation.  If it gets too hot, the cabinet top lid gap can be increased. </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
