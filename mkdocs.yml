@@ -1,0 +1,18 @@
+site_name: Wolverine System Design 
+
+markdown_extensions:
+  - pymdownx.arithmatex
+
+theme:
+  name: material
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+
+nav:
+  - Objectives: objectives.md
+  - Power Selection and Constraints: power-selection.md
+  - Chassis Fit: chassis-fit.md
+  - Wolverine and Mezmerize options: main-options.md
+  - LED indicators and Faults: fault-systems.md
