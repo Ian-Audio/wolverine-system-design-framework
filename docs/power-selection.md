@@ -33,6 +33,30 @@ The Wolverine amplifier comes in variants EF3-3, EF3-4 and EF-3-5.  I select the
 
 I also must select rail voltage.  Higher rail voltages increase output capability, but also generate more heat.
 
+They also increase how loudly the amplifier can play, with a given speaker
+
+I've used the spreadsheet "SPL and Rail voltage calculator.xls" to estimate what I need.
+
+I'm listening at a distance of 6m, my speakers are 88 dB/W and 6 ohm nominal impedance
+
+I don't like it loud, so rather than the 90 dB using in the build guide, I'll set my maximum SPL as 85 dB, the generally accepted OHS safe threshold for prolonged sound exposure.  (even that is probably too loud for me but I'll use it as a starting point)
+
+Entering values of RMS output by binary search, i find that an 7.365 V RMS output gives 85.00 dB RMS SPL at 6m.
+
+![Sound pressure level calculation](images/spl-85.jpg)
+
+Moving to the Clipping calculator, with a song having 12 DB dynamic range (slightly more than typical), it tells me that I need minimum 50V DC rail.
+
+![Clipping calculation](images/clipping.jpg)
+
+I note that is generating 100 dB SPL at the dynamic peaks.  In practice, I'd not expect to tolerate anywhere near that level, I'd turn the volume down.
+
+Following the wolverine build guide I will try a quick test with my iphone using the “Decibel X” app, to check what level I currently listen to my music at.
+This is to give me a rough indication of quiet, moderate and loud levels of SPL. 
+
+
+## 4. Selection of Wolverine EF3-n model and rail voltage
+
 The build guide gives this advice for 2 channels at 4 ohms  (rearranged and culled to ignore high power variants)
 
 | DC rail| Typical VA | 8Ω power W | AC V |
@@ -45,7 +69,7 @@ The build guide gives this advice for 2 channels at 4 ohms  (rearranged and cull
 |   57   |     800    |   160      |  40  |
 |   59   |     800    |   160      |  42  |
 
-But 50V DC / 36 V AC with 600 VA seems enough.  
+So 50V DC / 36 V AC with 600 VA seems enough.  
 
 However, I note that the Toroidy 800vA is the same size as the 600vA, so I might pick **36 V AC with 800 VA**
 
@@ -75,7 +99,7 @@ If I go for a dual mono with shared transformer, I'd pick 1 x 800 VA.
 If I go for 2 independent transformers, I'd go for 2 x 400 VA.
 
 
-## Mitigation for systemic overheating - Wolverine
+## 5. Mitigation for systemic overheating - Wolverine
 
 I've decided to sell my turntable (Linn LP12 with SME IV arm), as I'm no longer using it.  
 This gives more ventilation space in the cabinet (which has an open back)
@@ -91,7 +115,7 @@ Other things I might try if needed are:
 - Fan blowing upwards from the base of the cabinet past the amplifiers (last resort)
 
 
-# Preamp Power Requirements
+# 6. Preamp Power Requirements
 
 I plan to build a standard "10 years after" Mezmerize.  
 
