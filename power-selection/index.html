@@ -369,10 +369,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mitigation-for-systemic-overheating-wolverine" class="md-nav__link">
+  <a href="#4-selection-of-wolverine-ef3-n-model-and-rail-voltage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mitigation for systemic overheating - Wolverine
+        4. Selection of Wolverine EF3-n model and rail voltage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-mitigation-for-systemic-overheating-wolverine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Mitigation for systemic overheating - Wolverine
       
     </span>
   </a>
@@ -582,10 +593,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mitigation-for-systemic-overheating-wolverine" class="md-nav__link">
+  <a href="#4-selection-of-wolverine-ef3-n-model-and-rail-voltage" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mitigation for systemic overheating - Wolverine
+        4. Selection of Wolverine EF3-n model and rail voltage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-mitigation-for-systemic-overheating-wolverine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Mitigation for systemic overheating - Wolverine
       
     </span>
   </a>
@@ -629,6 +651,18 @@
 <h2 id="3-selection-of-wolverine-ef3-n-model-and-rail-voltage">3. Selection of Wolverine EF3-n model and rail voltage</h2>
 <p>The Wolverine amplifier comes in variants EF3-3, EF3-4 and EF-3-5.  I select the <strong>EF3-3</strong> variant as it generates the least heat.</p>
 <p>I also must select rail voltage.  Higher rail voltages increase output capability, but also generate more heat.</p>
+<p>They also increase how loudly the amplifier can play, with a given speaker</p>
+<p>I've used the spreadsheet "SPL and Rail voltage calculator.xls" to estimate what I need.</p>
+<p>I'm listening at a distance of 6m, my speakers are 88 dB/W and 6 ohm nominal impedance</p>
+<p>I don't like it loud, so rather than the 90 dB using in the build guide, I'll set my maximum SPL as 85 dB, the generally accepted OHS safe threshold for prolonged sound exposure.  (even that is probably too loud for me but I'll use it as a starting point)</p>
+<p>Entering values of RMS output by binary search, i find that an 7.365 V RMS output gives 85.00 dB RMS SPL at 6m.</p>
+<p><img alt="Sound pressure level calculation" src="../images/spl-85.jpg" /></p>
+<p>Moving to the Clipping calculator, with a song having 12 DB dynamic range (slightly more than typical), it tells me that I need minimum 50V DC rail.</p>
+<p><img alt="Clipping calculation" src="../images/clipping.jpg" /></p>
+<p>I note that is generating 100 dB SPL at the dynamic peaks.  In practice, I'd not expect to tolerate anywhere near that level, I'd turn the volume down.</p>
+<p>Following the wolverine build guide I will try a quick test with my iphone using the “Decibel X” app, to check what level I currently listen to my music at.
+This is to give me a rough indication of quiet, moderate and loud levels of SPL. </p>
+<h2 id="4-selection-of-wolverine-ef3-n-model-and-rail-voltage">4. Selection of Wolverine EF3-n model and rail voltage</h2>
 <p>The build guide gives this advice for 2 channels at 4 ohms  (rearranged and culled to ignore high power variants)</p>
 <table>
 <thead>
@@ -684,7 +718,7 @@
 </tr>
 </tbody>
 </table>
-<p>But 50V DC / 36 V AC with 600 VA seems enough.  </p>
+<p>So 50V DC / 36 V AC with 600 VA seems enough.  </p>
 <p>However, I note that the Toroidy 800vA is the same size as the 600vA, so I might pick <strong>36 V AC with 800 VA</strong></p>
 <p>One complexity is deciding what voltage of primary should be specified, based on my mains supply.
 I've been measuring my mains supply for the past week, at different times of day.<br />
@@ -706,7 +740,7 @@ I'll get slightly different resulting actual rail voltages depending on which I 
 It better fits the objective of getting the best out of my VAF i91's, as far as practicable.</p>
 <p>If I go for a dual mono with shared transformer, I'd pick 1 x 800 VA.
 If I go for 2 independent transformers, I'd go for 2 x 400 VA.</p>
-<h2 id="mitigation-for-systemic-overheating-wolverine">Mitigation for systemic overheating - Wolverine</h2>
+<h2 id="5-mitigation-for-systemic-overheating-wolverine">5. Mitigation for systemic overheating - Wolverine</h2>
 <p>I've decided to sell my turntable (Linn LP12 with SME IV arm), as I'm no longer using it.<br />
 This gives more ventilation space in the cabinet (which has an open back)</p>
 <p>I will build the preamp as a half width unit, so it can go in the turntable space with my half-width streamer.
@@ -718,7 +752,7 @@ This leaves a bigger free space for the power amplifier below.</p>
 <li>Removing the cabinet's glass door. (subject to the domestic harmony test)</li>
 <li>Fan blowing upwards from the base of the cabinet past the amplifiers (last resort)</li>
 </ul>
-<h1 id="preamp-power-requirements">Preamp Power Requirements</h1>
+<h1 id="6-preamp-power-requirements">6. Preamp Power Requirements</h1>
 <p>I plan to build a standard "10 years after" Mezmerize.  </p>
 <p>This is designed to run at 200mA and the official Salas BOM nominates a 50vA , 2 x 15 V transformer. </p>
 <p>The intended placement in the turntable area has limited ventilation.  If it gets too hot, the cabinet top lid gap can be increased. </p>
