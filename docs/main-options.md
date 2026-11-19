@@ -8,8 +8,9 @@ This is more a snapshot, rather than locked in stone -  it has been changing as 
 - 10kΩ input configuration.  
 - Dual mono, single chassis build.
 - 800 VA custom transformer with a 4 x 36V AC 192 VA and 2 x 12V 10vA independent secondaries 
-- Chassis Modushop Dissipante 4U, 400mm depth, possibly DIY audio Deluxe version - not sure how to combine that with all heatsink drillings for Wolverine
-- 2 x Speaker protection boards (wolverine option - powered directly from the main DC rails, monitoring short circuits and managing the 65°C thermal warning loop). go for Mosfet version of parts.
+- Chassis Modushop Dissipante 4U, 400mm depth, DIY audio Deluxe version
+- 2 x Speaker protection boards (wolverine option monitoring short circuits and managing the 65°C thermal warning loop). go for Mosfet version of parts.
+- Power speaker protection boards from separate regulated 12VDC auxiliary PSU's, each fed from a 12VAC transformer auxiliary winding
 - 2 x 12V dc power regulator module for speaker board e.g Kiro&Seeu 7812-MD-1P 
 - 2 x Ground lift boards (wolverine option)
 - 2 x T-Ground boards (wolverine option)

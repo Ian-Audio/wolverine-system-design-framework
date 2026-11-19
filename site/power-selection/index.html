@@ -8,6 +8,8 @@
       
       
       
+        <link rel="canonical" href="https://ian-audio.github.io/wolverine-system-design-framework/power-selection/">
+      
       
         <link rel="prev" href="../objectives/">
       
@@ -153,6 +155,18 @@
       
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/Ian-Audio/wolverine-system-design-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Ian-Audio/wolverine-system-design-framework
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -187,7 +201,46 @@
     Wolverine System Design
   </label>
   
+    <div class="md-nav__source">
+      <a href="https://github.com/Ian-Audio/wolverine-system-design-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Ian-Audio/wolverine-system-design-framework
+  </div>
+</a>
+    </div>
+  
   <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
     
       
       
@@ -501,6 +554,9 @@
                   
 
 
+  
+  
+
 
 <h1 id="power-selection-and-constraints">Power selection and constraints</h1>
 <h2 id="1-amplifier-options">1. Amplifier options</h2>
@@ -576,11 +632,11 @@
 </table>
 <p>But 50V DC / 36 V AC with 600 VA seems enough.  </p>
 <p>However, I note that the Toroidy 800vA is the same size as the 600vA, so I might pick <strong>36 V AC with 800 VA</strong></p>
-<p>One complexity is deciding what the primary should be specified, based on my mains supply
+<p>One complexity is deciding what voltage of primary should be specified, based on my mains supply.
 I've been measuring my mains supply for the past week, at different times of day.<br />
 So far, it ranges from 230V AC to 240V AC. 
 Mornings 230V, evenings 240V. 
-This is on the lower end I believe for Australian supply.
+I believe this is on the lower end of typical for Australian supply.
 So my choices for spec'ing the tranformer primary are 230V, 240V or a custom 235V.
 I'll get slightly different resulting actual rail voltages depending on which I choose.</p>
 <p>I also have to pick the configuration, stereo, dual mono with 2 transformers in a single chassis, or 2 monoblocs</p>

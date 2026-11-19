@@ -49,11 +49,11 @@ But 50V DC / 36 V AC with 600 VA seems enough.
 
 However, I note that the Toroidy 800vA is the same size as the 600vA, so I might pick **36 V AC with 800 VA**
 
-One complexity is deciding what the primary should be specified, based on my mains supply
+One complexity is deciding what voltage of primary should be specified, based on my mains supply.
 I've been measuring my mains supply for the past week, at different times of day.  
 So far, it ranges from 230V AC to 240V AC. 
 Mornings 230V, evenings 240V. 
-This is on the lower end I believe for Australian supply.
+I believe this is on the lower end of typical for Australian supply.
 So my choices for spec'ing the tranformer primary are 230V, 240V or a custom 235V.
 I'll get slightly different resulting actual rail voltages depending on which I choose.
 

@@ -1,4 +1,8 @@
-site_name: Wolverine System Design 
+site_name: Wolverine System Design
+site_url: https://ian-audio.github.io/wolverine-system-design-framework/ 
+
+repo_url: https://github.com/Ian-Audio/wolverine-system-design-framework
+repo_name: Ian-Audio/wolverine-system-design-framework
 
 markdown_extensions:
   - pymdownx.arithmatex

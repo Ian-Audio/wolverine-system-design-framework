@@ -1,6 +1,11 @@
-# Wolverine System Design
+# Ian-Audio's Wolverine based HiFi System
 
-Welcome to the Wolverine System Design documentation.
+Welcome to Ian-Audio's Wolverine based HiFi System Design site.
+
+Note this is not official Wolverine documentation.
+
+This documents tailoring a pre and power amplifier, to suit my preferences, needs and constraints. 
+
 
 ## Contents
 
