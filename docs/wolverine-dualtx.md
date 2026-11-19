@@ -4,8 +4,11 @@ This is a high level summary for the option with Dual mono separate transformers
 
 Compared to the shared transformer, it uses stacked smaller transformers, reducing floor area, more distance from PSU to outputs, reducing hum risk etc.
 It separates the channels further, being a true dual mono.
+It needs a 5U chassis rather than 4U, but that will still fit fine in the cabinet.
 
 This is more a snapshot, rather than locked in stone -  it has been changing as I learn things.
+
+![Wolverine dual transformer layout](images/wolverine-dualtx.jpg)
 
 - EF3-3 with 50V DC rails. 
 - 10kΩ input configuration.  
@@ -29,5 +32,4 @@ This is more a snapshot, rather than locked in stone -  it has been changing as 
 - 2 RCA connectors, insulated
 - 4 speaker binding posts  
 
-![Wolverine dual transformer layout](images/wolverine-dualtx.jpg)
-
+![Wolverine dual transformer fit 4u vs 5u](images/wolverine-4u-vs-5u.jpg)

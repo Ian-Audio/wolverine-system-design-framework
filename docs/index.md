@@ -12,6 +12,7 @@ This documents tailoring a pre and power amplifier, to suit my preferences, need
 - Objectives
 - Power Selection and Constraints
 - Chassis Fit
-- Wolverine Shared transformer 
+- Wolverine Shared transformer option
+- Wolverine Dual transformer option
 - Mezmerize preamp
 - LED Indicators and Fault Systems
