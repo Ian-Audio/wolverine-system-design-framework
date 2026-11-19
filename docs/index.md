@@ -6,6 +6,7 @@ Note this is not official Wolverine documentation.
 
 This documents tailoring a pre and power amplifier, to suit my preferences, needs and constraints. 
 
+Thanks to those from the diyAudio wolverine community who have been helping me, especially Stuartmp and Mainframe. 
 
 ## Contents
 
