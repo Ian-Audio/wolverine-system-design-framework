@@ -1,9 +1,9 @@
-# Wolverine 2 transformer option
+# Wolverine Dual transformer option
 
 This is a high level summary for the option with Dual mono separate transformers in one chassis
 
-The reason to consider this is that it separates the channels further.
-Stacked smaller transformers, allows more distance between the power area and the outputs, for less risk of problems with hum etc.
+Compared to the shared transformer, it uses stacked smaller transformers, reducing floor area, more distance from PSU to outputs, reducing hum risk etc.
+It separates the channels further, being a true dual mono.
 
 This is more a snapshot, rather than locked in stone -  it has been changing as I learn things.
 
@@ -29,5 +29,5 @@ This is more a snapshot, rather than locked in stone -  it has been changing as 
 - 2 RCA connectors, insulated
 - 4 speaker binding posts  
 
-![Wolverine shared transformer layout](images/wolverine-sharedtx.jpg)
+![Wolverine dual transformer layout](images/wolverine-dualtx.jpg)
 

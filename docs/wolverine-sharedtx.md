@@ -4,6 +4,8 @@ This is a high level summary of the main features being considered (assumes the 
 
 This is more a snapshot, rather than locked in stone -  it has been changing as I learn things.
 
+![Wolverine shared transformer layout](images/wolverine-sharedtx.jpg)
+
 - EF3-3 with 50V DC rails. 
 - 10kΩ input configuration.  
 - Dual mono, single chassis build.
@@ -25,5 +27,4 @@ This is more a snapshot, rather than locked in stone -  it has been changing as 
 - 2 RCA connectors, insulated
 - 4 speaker binding posts  
 
-![Wolverine shared transformer layout](images/wolverine-sharedtx.jpg)
 
