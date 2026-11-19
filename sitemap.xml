@@ -13,10 +13,6 @@
          <lastmod>2026-11-19</lastmod>
     </url>
     <url>
-         <loc>https://ian-audio.github.io/wolverine-system-design-framework/main-options/</loc>
-         <lastmod>2026-11-19</lastmod>
-    </url>
-    <url>
          <loc>https://ian-audio.github.io/wolverine-system-design-framework/mezmerize-options/</loc>
          <lastmod>2026-11-19</lastmod>
     </url>
@@ -26,6 +22,10 @@
     </url>
     <url>
          <loc>https://ian-audio.github.io/wolverine-system-design-framework/power-selection/</loc>
+         <lastmod>2026-11-19</lastmod>
+    </url>
+    <url>
+         <loc>https://ian-audio.github.io/wolverine-system-design-framework/shared-tx/</loc>
          <lastmod>2026-11-19</lastmod>
     </url>
 </urlset>
