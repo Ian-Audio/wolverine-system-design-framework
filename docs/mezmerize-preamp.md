@@ -1,8 +1,5 @@
 # Mezmerize preamp Options
 
-
-![Mezmerize layout](images/mezmerize-layout.jpg)
-
 - Mezmerize standard '10 years after' B1 buffer PCB, running 200 mA,
 - Chassis Modushop Galaxy 2U, 230mm wide x 280mm depth.  Aluminium cover.
 - Provision for 3 line level audio inputs (CD, NET, and AUX)
@@ -17,3 +14,5 @@
 - Potentiometer TKD 2CP-2511 (20kΩ Logarithmic)
 - Volume knob - Modushop 40mm black.
 - Print colour D0D0D0 in RGB - light silver. 
+
+![Mezmerize layout](images/mezmerize-layout.jpg)

@@ -19,6 +19,6 @@ nav:
   - Objectives: objectives.md
   - Power Selection and Constraints: power-selection.md
   - Chassis Fit: chassis-fit.md
-  - Wolverine and Mezmerize options: main-options.md
-  - Mezmerize options: 
+  - Wolverine shared transformer: wolverine-shared-tx.md
+  - Mezmerize preamp: mezmerize-preamp.md
   - LED indicators and Faults: fault-systems.md
