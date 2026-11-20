@@ -13,7 +13,6 @@ Thanks to those from the diyAudio wolverine community who have been helping me, 
 - Objectives
 - Power Selection and Constraints
 - Chassis Fit
-- Wolverine Shared transformer option
-- Wolverine Dual transformer option
+- Wolverine power amp
 - Mezmerize preamp
 - LED Indicators and Fault Systems
