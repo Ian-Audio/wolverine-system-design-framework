@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://ian-audio.github.io/wolverine-system-design-framework/wolverine-dualtx/">
+        <link rel="canonical" href="https://ian-audio.github.io/wolverine-system-design-framework/wolverine/">
       
       
-        <link rel="prev" href="../wolverine-sharedtx/">
+        <link rel="prev" href="../chassis-fit/">
       
       
-        <link rel="next" href="../mezmerize-preamp/">
+        <link rel="next" href="../mezmerize/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Wolverine dual transformer - Wolverine System Design</title>
+        <title>Wolverine power amplifier - Wolverine System Design</title>
       
     
     
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Wolverine dual transformer
+              Wolverine power amplifier
             
           </span>
         </div>
@@ -327,33 +327,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../wolverine-sharedtx/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Wolverine shared transformer
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -373,7 +346,7 @@
   <span class="md-ellipsis">
     
   
-    Wolverine dual transformer
+    Wolverine power amplifier
   
 
     
@@ -394,7 +367,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mezmerize-preamp/" class="md-nav__link">
+      <a href="../mezmerize/" class="md-nav__link">
         
   
   
@@ -480,28 +453,23 @@
 
 
 <h1 id="wolverine-dual-transformer-option">Wolverine Dual transformer option</h1>
-<p>This is a high level summary for the option with Dual mono separate transformers in one chassis</p>
-<p>Compared to the shared transformer, it uses stacked smaller transformers, reducing floor area, more distance from PSU to outputs, reducing hum risk etc.
-It separates the channels further, being a true dual mono.
-It needs a 5U chassis rather than 4U, but that will still fit fine in the cabinet.</p>
 <p>This is more a snapshot, rather than locked in stone -  it has been changing as I learn things.</p>
-<p><img alt="Wolverine dual transformer layout" src="../images/wolverine-dualtx.jpg" /></p>
+<p><img alt="Wolverine dual transformer layout" src="../images/wolverine-planview.jpg" /></p>
+<p><img alt="Wolverine transformer fit vertically" src="../images/wolverine-sideview.jpg" /></p>
 <ul>
 <li>EF3-3 with 50V DC rails. </li>
 <li>10kΩ input configuration.  </li>
 <li>Dual mono, single chassis 2 transformer build.</li>
-<li>2 x 400 VA transformers, each with 2 x 36V AC and 12V 10vA Aux independent secondary (Toroidy audio Supreme custom)</li>
-<li>Chassis Modushop Dissipante 5U, 400mm depth, DIY audio Deluxe version (extra height of 5U allows stacking of transformers)</li>
+<li>2 x 400 VA transformers, each with 2 x 35V AC secondaries</li>
+<li>Chassis Modushop Dissipante 5U, 400mm depth, DIY audio Deluxe version (5U height allows stacking of transformers)</li>
 <li>2 x Speaker protection boards (wolverine option monitoring short circuits and managing the 65°C thermal warning loop). go for Mosfet version of parts.</li>
-<li>Power speaker protection boards from separate regulated 12VDC auxiliary PSU's, each fed from a 12VAC transformer auxiliary winding</li>
-<li>2 x 12V dc power regulator module for speaker board e.g Kiro&amp;Seeu 7812-MD-1P - or home built?</li>
+<li>2 x 230VAC to 12V dc power regulator module Traco TMPW 5-112-T - to drive speaker protection boards</li>
 <li>2 x Ground lift boards (wolverine option)</li>
 <li>2 x T-Ground boards (wolverine option)</li>
 <li>2 x Dual bridge rectifier boards (wolverine option)</li>
-<li>Caps mounting - home built for screw caps, or other compact option TBD.</li>
-<li>Caps capacity: Targeting about 80000 uF</li>
+<li>Caps mounting - 4 x screw caps, each about 20000 uF</li>
 <li>thermal Safety Switches: One TO-220 style bimetallic switch per heatsink (e.g 65°C NC Sensata / Airpax 67L065 for the Wolverine board).</li>
-<li>Soft start: Hypex (purchased, in transit)</li>
+<li>Soft start: Hypex </li>
 <li>IEC mains input, flange mount with integrated fuse holder Schurter e.g 4304.6020 and switch</li>
 <li>4A Slow-Blow (Time-Delay / "T" rated) 5x20mm fuse.</li>
 <li>Push Button On off, latching, illuminated red ring, e.g  EAO 82-5151.2113  (12V LED) or E-Switch PV4F23011-3R4</li>
@@ -509,7 +477,6 @@ It needs a 5U chassis rather than 4U, but that will still fit fine in the cabine
 <li>2 RCA connectors, insulated</li>
 <li>4 speaker binding posts  </li>
 </ul>
-<p><img alt="Wolverine dual transformer fit 4u vs 5u" src="../images/wolverine-4u-vs-5u.jpg" /></p>
 
 
 

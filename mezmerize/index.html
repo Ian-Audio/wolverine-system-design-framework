@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://ian-audio.github.io/wolverine-system-design-framework/wolverine-sharedtx/">
+        <link rel="canonical" href="https://ian-audio.github.io/wolverine-system-design-framework/mezmerize/">
       
       
-        <link rel="prev" href="../chassis-fit/">
+        <link rel="prev" href="../wolverine/">
       
       
-        <link rel="next" href="../wolverine-dualtx/">
+        <link rel="next" href="../fault-systems/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Wolverine shared transformer - Wolverine System Design</title>
+        <title>Mezmerize preamp - Wolverine System Design</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#wolverine-shared-transformer-option" class="md-skip">
+        <a href="#mezmerize-preamp-options" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Wolverine shared transformer
+              Mezmerize preamp
             
           </span>
         </div>
@@ -327,6 +327,33 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../wolverine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wolverine power amplifier
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -346,61 +373,6 @@
   <span class="md-ellipsis">
     
   
-    Wolverine shared transformer
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../wolverine-dualtx/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Wolverine dual transformer
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../mezmerize-preamp/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
     Mezmerize preamp
   
 
@@ -410,6 +382,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -479,32 +452,24 @@
   
 
 
-<h1 id="wolverine-shared-transformer-option">Wolverine shared transformer option</h1>
-<p>This is a high level summary of the main features being considered (assumes the dual mono shared transformer configuration)</p>
-<p>This is more a snapshot, rather than locked in stone -  it has been changing as I learn things.</p>
-<p><img alt="Wolverine shared transformer layout" src="../images/wolverine-sharedtx.jpg" /></p>
+<h1 id="mezmerize-preamp-options">Mezmerize preamp Options</h1>
 <ul>
-<li>EF3-3 with 50V DC rails. </li>
-<li>10kΩ input configuration.  </li>
-<li>Dual mono, single chassis build.</li>
-<li>800 VA custom transformer with a 4 x 36V AC 192 VA and 2 x 12V 10vA independent secondaries </li>
-<li>Chassis Modushop Dissipante 4U, 400mm depth, DIY audio Deluxe version</li>
-<li>2 x Speaker protection boards (wolverine option monitoring short circuits and managing the 65°C thermal warning loop). go for Mosfet version of parts.</li>
-<li>Power speaker protection boards from separate regulated 12VDC auxiliary PSU's, each fed from a 12VAC transformer auxiliary winding</li>
-<li>2 x 12V dc power regulator module for speaker board e.g Kiro&amp;Seeu 7812-MD-1P </li>
-<li>2 x Ground lift boards (wolverine option)</li>
-<li>2 x T-Ground boards (wolverine option)</li>
-<li>PSU undecided. 2 stacked diyAudio PSU v3 boards does fit but is bulky, has the caps closer to the sensitive bits than I'd like. Doesnt seem right. look for alternatives   </li>
-<li>Caps: If using two PSU v3 boards, 16 x 4700 uF 35mm Ø x 30mm high Nichicon LLS 80V rated  (75200 uF total)</li>
-<li>thermal Safety Switches: One TO-220 style bimetallic switch per heatsink (e.g 65°C NC Sensata / Airpax 67L065 for the Wolverine board).</li>
-<li>Soft start: Hypex (purchased, in transit)</li>
-<li>IEC mains input, flange mount with integrated fuse holder Schurter e.g 4304.6020 </li>
-<li>4A Slow-Blow (Time-Delay / "T" rated) 5x20mm fuse.</li>
-<li>Push Button On off, latching, illuminated red ring, e.g  EAO 82-5151.2113  (12V LED) or E-Switch PV4F23011-3R4</li>
-<li>Output transistors,  Onsemi 6 x NJW0281G and 6 x NJW0302G from Mouser (but buy 8 pairs)</li>
-<li>2 RCA connectors, insulated</li>
-<li>4 speaker binding posts  </li>
+<li>Mezmerize standard '10 years after' B1 buffer PCB, running 200 mA,</li>
+<li>Chassis Modushop Galaxy 2U, 230mm wide x 280mm depth.  Aluminium cover.</li>
+<li>Provision for 3 line level audio inputs (CD, NET, and AUX)</li>
+<li>Rotary switch for input with 60 deg throw; Greyhill 50D60-01-1-AJN (6.35mm shaft)</li>
+<li>Input Knob Modushop 25mm black. (drill out to fit 6.35mm)  </li>
+<li>Push Button On off, latching, EAO series 82-5151.2116.  19mm, Illuminated Red ring (230VAC for LED)</li>
+<li>5 pairs RCA connectors with integrated Teflon or POM isolation washers. eg Neutrik REAN NYS367 (3 input pairs, 2 pair outputs to power amp &amp; sub)</li>
+<li>Toroidal transformer 50 VA, 2 × 15 V</li>
+<li>LSK170 transistors - prematched Linear systems 8-11 mA Quad set from diyAudio store. (plus 6 others that don't need to be matched)</li>
+<li>IEC mains input, flange mount with integrated fuse holder Schurter 4304.6020 </li>
+<li>T315 mA slow blow fuses</li>
+<li>Potentiometer TKD 2CP-2511 (20kΩ Logarithmic)</li>
+<li>Volume knob - Modushop 40mm black.</li>
+<li>Print colour D0D0D0 in RGB - light silver. </li>
 </ul>
+<p><img alt="Mezmerize layout" src="../images/mezmerize-layout.jpg" /></p>
 
 
 
