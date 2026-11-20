@@ -646,8 +646,9 @@
 <p>I am upgrading to a Wolverine in search of improved sound quality rather than volume. </p>
 <p>My VAF signature i91 mk1 speakers have nominal impedance 6Ω, and sensitivity 88 dB/W/m, max 150W.</p>
 <p>My 40W per channel Exposure Super VX integrated amp drives these with ample volume for me; I listen at modest levels.</p>
-<p>All Wolverine listed options are 100W or more, so I will have more than enough sound level (volume) capability. </p>
-<p>I'm upgrading for hoped gains in sound quality, not sound level (volume).  The reason to have a bit more is headroom for dynamics.</p>
+<p>All Wolverine listed options are 100W or more, so by this first approximation sanity test, I will have enough sound level (volume) capability whichever option I select. </p>
+<p>I'm upgrading for hoped gains in sound quality, not sound level (volume).  </p>
+<p>The reason to have a bit more than the 40W of my Exposure is headroom for dynamics.</p>
 <h2 id="3-selection-of-wolverine-ef3-n-model-and-rail-voltage">3. Selection of Wolverine EF3-n model and rail voltage</h2>
 <p>The Wolverine amplifier comes in variants EF3-3, EF3-4 and EF-3-5.  I select the <strong>EF3-3</strong> variant as it generates the least heat.</p>
 <p>I also must select rail voltage.  Higher rail voltages increase output capability, but also generate more heat.</p>
@@ -660,8 +661,10 @@
 <p>Moving to the Clipping calculator, with a song having 12 DB dynamic range (slightly more than typical), it tells me that I need minimum 50V DC rail.</p>
 <p><img alt="Clipping calculation" src="../images/clipping.jpg" /></p>
 <p>I note that is generating 100 dB SPL at the dynamic peaks.  In practice, I'd not expect to tolerate anywhere near that level, I'd turn the volume down.</p>
-<p>Following the wolverine build guide I will try a quick test with my iphone using the “Decibel X” app, to check what level I currently listen to my music at.
-This is to give me a rough indication of quiet, moderate and loud levels of SPL. </p>
+<p>Following the wolverine build guide I tested with my iphone using the “Decibel X” app, playing my "audition" song selection from my Exposure amplifier.  That's a mix of rock and classical.</p>
+<p>I set it at a slightly higher level than I normally listen at, I found it a little fatiguing at this level.</p>
+<p>My average was 71.1 dB SPL, maximum SPL level on a peak was 85.3 dB.   </p>
+<p>So the amplifier at 50 VDC is more than enough, as it can run 85 dB SPL continuous and 100dB SLP peaks without clipping.</p>
 <h2 id="4-selection-of-wolverine-ef3-n-model-and-rail-voltage">4. Selection of Wolverine EF3-n model and rail voltage</h2>
 <p>The build guide gives this advice for 2 channels at 4 ohms  (rearranged and culled to ignore high power variants)</p>
 <table>
@@ -728,6 +731,10 @@ Mornings 230V, evenings 240V.
 I believe this is on the lower end of typical for Australian supply.
 So my choices for spec'ing the tranformer primary are 230V, 240V or a custom 235V.
 I'll get slightly different resulting actual rail voltages depending on which I choose.</p>
+<p>If I use a standard 230 VAC primary (non-custom), with a 36 VAC secondary, and I'm receiving 230 V AC at the mains (the minimum I've measured), I get sqrt(2)*36 = 50.9 VDC.</p>
+<p>If my mains voltage is 235 VAC (the average that I've measured at my house), I get sqrt(2) * (235*36/230)= 1.414 * 36.8 = 52.0 VDC</p>
+<p>Similarly for 240 VAC (the maximum that I've measured at my house), I get 53.1 VDC</p>
+<p>So using a 36V AC secondary with a 230V primary gives me a bit of extra margin, without going overboard.   And it means I'm a shade higher than the bottom of the guidance table.</p>
 <p>I also have to pick the configuration, stereo, dual mono with 2 transformers in a single chassis, or 2 monoblocs</p>
 <p>The pre-build guide says:</p>
 <ul>
