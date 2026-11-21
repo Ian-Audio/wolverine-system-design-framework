@@ -19,9 +19,4 @@ This is more a snapshot, rather than locked in stone -  it has been changing as 
 - Caps mounting - 4 x screw caps, each about 20000 uF
 - thermal Safety Switches: One TO-220 style bimetallic switch per heatsink (e.g 65°C NC Sensata / Airpax 67L065 for the Wolverine board).
 - Soft start: Hypex 
-- IEC mains input, flange mount with integrated fuse holder Schurter e.g 4304.6020 and switch
-- 4A Slow-Blow (Time-Delay / "T" rated) 5x20mm fuse.
-- Push Button On off, latching, illuminated red ring, e.g  EAO 82-5151.2113  (12V LED) or E-Switch PV4F23011-3R4
-- Output transistors,  Onsemi 6 x NJW0281G and 6 x NJW0302G from Mouser (but buy 8 pairs)
-- 2 RCA connectors, insulated
-- 4 speaker binding posts  
+- Push Button On off, latching, illuminated red ring, e.g  EAO 82-5151.2113 (12V LED) 

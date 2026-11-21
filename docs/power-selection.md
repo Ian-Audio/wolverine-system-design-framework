@@ -56,11 +56,10 @@ The build guide gives this advice for 2 channels at 4 ohms  (rearranged and cull
 |   54   |     700    |   150      |  38  |
 |   57   |     700    |   150      |  40  |
 |   57   |     800    |   160      |  40  |
-|   59   |     800    |   160      |  42  |
 
 I'll look at what happens with the 35 V AC. My mains supply ranges from 230V AC to 240V AC. 
 
-Using a transformer designed for a 230V primary and 36VAC secondaries then for different mains voltages: AC voltage Vacr = Vac * Vmains/230 and rail voltage Vdc = Vacr * sqrt(2) 
+Using a transformer designed for a 230V primary and 35VAC secondaries (Vac) then for different mains voltages: AC voltage Vacr = Vac * Vmains/230 and rail voltage Vdc = Vacr * sqrt(2) 
 
 | V mains | V acr  | V dc   |
 |--------|---------|--------|
